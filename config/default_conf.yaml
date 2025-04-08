@@ -1,0 +1,26 @@
+app:
+  name: "MyConfigApp"
+  environment: "dev"
+
+database:
+  host: "host.docker.internal"
+  port: 5432
+  username: "default_user"
+  password: "password_placeholder"
+  db_name: "whatever_db_name_you_want"
+  driver: "postgresql"
+
+table_names:
+  input_table: "some_input_table"
+  output_table: "some_output_table"
+
+data_paths:
+  input_path: "s3://${OUTPUT_BUCKET}/path/to/input/data" # USE ENV VARIABLES TO SET BUCKET NAME
+  output_path: "s3://${OUTPUT_BUCKET}/path/to/output/data" # USE ENV VARIABLES TO SET BUCKET NAME
+
+filter_values:
+  - "filter_value_1"
+  - "filter_value_2"
+  - "filter_value_3"
+
+# Add more configuration options as needed...
